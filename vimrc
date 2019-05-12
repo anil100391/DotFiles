@@ -5,6 +5,10 @@ set expandtab
 set list
 set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→
 
+" ENABLE JUSTIFY MACRO
+" run _j to justify the doc
+run macros/justify.vim
+
 " SNIPPETS
 " Read a template cpp file in and move cursor to main
 nnoremap ,cpp :read $HOME/.skeleton.cpp<CR>4j4la
