@@ -5,6 +5,10 @@ set expandtab
 set list
 set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→
 
+"CLANG FORMAT
+map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
+imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
+
 " ENABLE JUSTIFY MACRO
 " run _j to justify the doc
 run macros/justify.vim
