@@ -25,5 +25,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
+
+set background=dark
+colorscheme PaperColor
