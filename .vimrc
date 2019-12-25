@@ -17,6 +17,10 @@ run macros/justify.vim
 " Read a template cpp file in and move cursor to main
 nnoremap ,cpp :read $HOME/.skeleton.cpp<CR>4j4la
 
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 " PLUGINS
 " specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
