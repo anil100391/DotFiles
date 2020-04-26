@@ -5,7 +5,21 @@ set expandtab
 set list
 set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→
 
-"CLANG FORMAT
+" Search down into subfolders
+" Provides tab-completions for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
+" NOW WE CAN
+" - Hit tab to :find by partial match
+" - Use * to make it fuzzy
+
+" THINGS TO CONSIDER
+" - :b lets you autocomplete any open buffer
+
+" CLANG FORMAT
 map <C-F> :pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
 imap <C-F> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
 
