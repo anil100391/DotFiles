@@ -19,6 +19,10 @@ set wildmenu
 " THINGS TO CONSIDER
 " - :b lets you autocomplete any open buffer
 
+" move visual selection up or down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '>-2<CR>gv=gv
+
 " CLANG FORMAT
 map <C-F> :pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
 imap <C-F> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
