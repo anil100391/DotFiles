@@ -19,6 +19,9 @@ set wildmenu
 " THINGS TO CONSIDER
 " - :b lets you autocomplete any open buffer
 
+" leader key mapped to space
+let mapleader=" "
+
 " move visual selection up or down
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '>-2<CR>gv=gv
@@ -26,6 +29,9 @@ vnoremap K :m '>-2<CR>gv=gv
 " CLANG FORMAT
 map <C-F> :pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
 imap <C-F> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format.py<cr>
+
+"fzf
+map <C-S-t> :FZF<cr>
 
 " ENABLE JUSTIFY MACRO
 " run _j to justify the doc
@@ -48,6 +54,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
